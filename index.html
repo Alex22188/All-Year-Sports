@@ -74,7 +74,29 @@ clear: both;
   text-align: left;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
 
+.tooltip .websitereferences {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .websitereferences {
+  visibility: visible;
+}
 
 </style>
 </head>
@@ -109,6 +131,9 @@ clear: both;
 <div class="footer">
 
 <p>© Website by Alex Burke 2024</p>
+
+<div class="tooltip">Hover here for website references
+<span class="websitesreferences">Cricket Australia, accessed 9/1/2024</span>
 
 </div>
 

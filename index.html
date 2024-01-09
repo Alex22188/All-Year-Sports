@@ -74,6 +74,30 @@ clear: both;
   text-align: left;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .websitereferences {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .websitereferences {
+  visibility: visible;
+}
 
 </style>
 </head>
@@ -104,16 +128,28 @@ clear: both;
 <p>Rugby League is played in Winter and is a team sport</p>
 
 
+  
 <div class="footer">
 
 <p>© Website by Alex Burke 2024</p>
 
-   
+<button onclick="document.getElementById('demo').innerHTML='Cricket Australia, CA Digital Media, accessed 9/01/2024;, Golf Australia, accessed 9/01/2024, https://www.golf.org.au/;, National Rugby League, accessed 9/1/2024, https://www.nrl.com/'">Press here for website references</button>
+<p id="demo"></p>
 
 </div>
 
+
 </body>
 </html>
+
+
+
+
+
+
+
+
+
 
 
 

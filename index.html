@@ -72,6 +72,30 @@ clear: both;
   text-align: left;
 }
 
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
 </style>
 </head>
 
@@ -107,11 +131,13 @@ clear: both;
 
 <p>© Website by Alex Burke 2024</p>
    
-<p>Website references:</p>
-<p>Cricket Australia, accessed 9/1/2024, <https://www.cricket.com.au/>.
+<div class="tooltip">Hover mouse here for website references
+<span class="websitereferences">Cricket Australia, accessed 9/1/2024, <https://www.cricket.com.au/>.
 Golf Australia, accessed 9/1/2024, <https://www.golf.org.au/>.
 National Rugby League, accessed 9/1/2024, <https://www.nrl.com/>.
-</p>
+</span>
+
+</div>
 </div>
 
 </body>

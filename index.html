@@ -44,7 +44,19 @@ background-color: grey;
 color: black;
 }
 
+.column {
+float: left;
+width: 33.33%;
+padding: 15px;
+}
 
+.row::after {
+content: "";
+display: table;
+clear: both;
+}
+
+   
    
 
 </style>
@@ -60,6 +72,15 @@ color: black;
 <a href=#>Rugby League</a>
 </div>
 
+<div class="row">
+<div class="column1">
+<p>Cricket is played in Summer</p>
+
+<div class="column2">
+<p>Golf is played all year round</p>
+
+<div class="column3">
+<p>Rugby League is played in Winter</p>
 
 </body>
 </html>

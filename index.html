@@ -23,7 +23,7 @@ body {
    background-color: lightblue;
 }
 
-.flip-box {
+.flip-box1 {
   background-color: transparent;
   width: 300px;
   height: 200px;
@@ -31,7 +31,7 @@ body {
   perspective: 1000px;
 }
 
-.flip-box-inner {
+.flip-box1-inner {
   position: relative;
   width: 100%;
   height: 100%;
@@ -40,11 +40,11 @@ body {
   transform-style: preserve-3d;
 }
 
-.flip-box:hover .flip-box-inner {
+.flip-box1:hover .flip-box1-inner {
   transform: rotateY(180deg);
 }
 
-.flip-box-front, .flip-box-back {
+.flip-box1-front, .flip-box1-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -52,18 +52,56 @@ body {
   backface-visibility: hidden;
 }
 
-.flip-box-front {
+.flip-box1-front {
   background-color: #bbb;
   color: black;
 }
 
-.flip-box-back {
+.flip-box1-back {
   background-color: dodgerblue;
   color: white;
   transform: rotateY(180deg);
 }
 
+.flip-box2 {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+}
 
+.flip-box2-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box2:hover .flip-box2-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box2-front, .flip-box2-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box2-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box2-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+}
 
 @media screen and (max-width: 600px) {
   .footer.side, .footer.middle {
@@ -110,27 +148,28 @@ h3 {
 <a href=https://www.nrl.com>Rugby League</a>
 </div>
 
-<div class="flip-box">
-  <div class="flip-box-inner">
-    <div class="flip-box-front">
+<div class="flip-box1">
+  <div class="flip-box1-inner">
+    <div class="flip-box1-front">
       <h3>Cricket</h3>
     </div>
-    <div class="flip-box-back">
+    <div class="flip-box1-back">
       <h3>Back Side</h3>
     </div>
   </div>
 </div>
-
-   
-   
-<div class="column2">
-<h3>Golf</h3>
-<p>Golf is played all year round and is played mostly as individuals</p>
+<div class="flip-box2">
+  <div class="flip-box2-inner">
+    <div class="flip-box2-front">
+      <h3>Golf</h3>
+    </div>
+    <div class="flip-box2-back">
+      <h3>Back Side</h3>
+    </div>
+  </div>
 </div>
-
-<div class="column3">
-<h3>Rugby League</h3>
-<p>Rugby League is played in Winter and is a team sport</p>
+   
+   
 
 </div>
   

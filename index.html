@@ -6,62 +6,51 @@
 
 
 <style>
-
-* {
-box-sizing: border-box;
-}
-
 body {
-margin: 0;
-background-color: lightblue;
-
-}
-   
-   
-.header {
-background-color: Grey;
-color: White;
-padding: 20px;
-text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.sportsnav {
-   overflow: hidden;
-   background-color: black;
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
 }
 
-.sportsnav a {
-   float: left;
-   display: block;
-   color: White;
-   text-align: centre;
-   padding: 14px 16px;
-   text-decoration: none;
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
 }
 
-.sportsnav a:hover {
-background-color: grey;
-color: black;
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
 }
 
-.column {
-float: left;
-width: 33.33%;
-padding: 15px;
-
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-.row::after {
-content: "";
-display: table;
-clear: both;
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
 }
 
-@media screen and (max-width: 600px) {
-  .column.side, .column.middle {
-    width: 100%;
+.flip-box-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
 }
-}
+
+
 
 @media screen and (max-width: 600px) {
   .footer.side, .footer.middle {
@@ -108,12 +97,19 @@ h3 {
 <a href=https://www.nrl.com>Rugby League</a>
 </div>
 
-<div class="row">
-<div class="column1">
-<h3>Cricket</h3>
-<p>Cricket is played in Summer and is a team sport</p>
+<div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <h2>Cricket</h2>
+    </div>
+    <div class="flip-box-back">
+      <h2>Back Side</h2>
+    </div>
+  </div>
 </div>
 
+   
+   
 <div class="column2">
 <h3>Golf</h3>
 <p>Golf is played all year round and is played mostly as individuals</p>

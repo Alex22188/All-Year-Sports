@@ -47,9 +47,19 @@ margin: 0;
   background-color: #04AA6D;
   color: white;
 }
+
 .column {
-float: center;
-width: 100%;
+float: left;
+padding: 10px;
+}
+   
+.column.side {
+
+width: 25%;
+}
+.column.middle {
+
+width: 50%;
 }
 .img {
 background-color: grey;
@@ -133,7 +143,7 @@ h3 {
 </div>
 
  <div class="row">
-    <div class="leftcolumn">
+    <div class="column side">
      <div class="card" style="background-color: darkgoldenrod">
       
       <h2>Cricket</h2>
@@ -150,7 +160,7 @@ h3 {
             
            
         
-       <div class="middlecolumn" style="background-color: darkcyan">
+       <div class="column middle" style="background-color: darkcyan">
     
         <h2>Golf</h2>
       
@@ -165,7 +175,7 @@ h3 {
       </div>
        
 
-      <div class="rightcolumn" style="background-color: darkorange>
+      <div class="column side" style="background-color: darkorange>
 
   
        <h2>Rugby League</h2>
